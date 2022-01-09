@@ -1,81 +1,43 @@
-# 스마트홈 IoT 기기 제어를 위한 객체 인식 모델 구현
+# NVIDIA Jetson을 사용한 물체 인식 예제
 
-Jetson Nano에서 딥러닝을 사용한 이미지 처리 교육
-
-<br>
-
-# 프로그램
-
-## 1일차
-
-- [Jetson 셋업](jetson_setup.pdf)
-- [Linux 기본 명령어 실습](linux_commands.md)
-- Jetson-Inference 프로젝트 설치
-    - [소스에서 빌드](jetson_inference/setup_from_source.md)
-    - [docker 사용](jetson_inference/setup_by_docker.md)
+제2회 연구개발특구 인공지능 경진대회 AI SPARK 챌린지
+http://aifactory.space/competition/data/1946
 
 <br>
 
-## 2일차
-- 영상 분류 실습
-    - [분류(classificaiton)](jetson_inference/execute_classification.md)
-
-- 물체 탐지 실습
-    - [물체 탐지(object detection)](jetson_inference/execute_object_detection.md)
-
-- 영역 분할 실습
-    - [영역 분할(segmentation)](jetson_inference/execute_segmentation.md)
-
-- 포즈 추출 실습
-    - [포즈 추출(pose estimation)](jetson_inference/execute_pose_estimation.md)
-
-- 학습 실습
-    - [학습 환경 준비](jetson_inference/prepare_training.md)
-    - [분류(classification) 학습](jetson_inference/train_classification.md)
-    - [물체 탐지(object detection) 학습](jetson_inference/train_object_detection.md)
-
-<br>
-
-## 3일차
-- [딥러닝의 이해](deep_learning_intro.pptx)
-- 영상 데이터 분류 실습
-    - 속성 데이터 IRIS 분류 : [dnn_iris_classification.ipynb](./deep_learning/dnn_iris_classification.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dhrim/jetson_image/blob/master/deep_learning/dnn_iris_classification.ipynb)
-    - 영상 데이터 MNIST 분류 : [dnn_mnist.ipynb](./deep_learning/dnn_mnist.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dhrim/jetson_image/blob/master/deep_learning/dnn_mnist.ipynb)
-    - 영상 데이터 MNIST 분류 - CNN : [cnn_mnist.ipynb](./deep_learning/cnn_mnist.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dhrim/jetson_image/blob/master/deep_learning/cnn_mnist.ipynb)
-    - 컬러 영상 데이터 CIFAR10 분류 - CNN : [cnn_cifar10.ipynb](./deep_learning/cnn_cifar10.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dhrim/jetson_image/blob/master/deep_learning/cnn_cifar10.ipynb)
-    - 전이학습 영상 분류 Template : [template_image_data_transfer_learning_classification.ipynb](./deep_learning/template_image_data_transfer_learning_classification.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dhrim/jetson_image/blob/master/deep_learning/template_image_data_transfer_learning_classification.ipynb)
-
-<br>
-
-## 4일차
-
-- 카메라 캡쳐한 데이터 학습
-    - [영상 분류](jetson_inference/train_classification_thumb_up_down.md)
-    - [물체 탐지](jetson_inference/train_object_detection_with_custom_data.md)    
-- AWS 서버
-    - 학습 환경 소개, Jupyter 소개
-    - [AWS 서버에서 분류 학습](jetson_inference/train_classification_on_server.md)
-    - [AWS 서버에서 물체 탐지 학습](jetson_inference/train_object_detection_on_server.md)
-
-<br>
-
-## 5일차
-- 커스텀 데이터 AWS 서버에서 분류 학습 : [데이터](data/flowers.zip)
-- 커스텀 데이터 AWS 서버에서 Keras 코드로 분류 학습
-    - [데이터](data/flowers_prepared.zip)
-    - [학습 실행 노트북](jetson_inference/train_classification_on_server_on_keras.ipynb)
-    - [Jetson에 업로드와 분류 실행](jetson_inference/execute_classification_by_uploaded_model.md)
-
-<br>
-
-# 기타
-
-- 흥미로운 딥러닝 결과들 [some_interesting_deep_learning.pptx](some_interesting_deep_learning.pptx)
-- 영문 영화 평가 데이터 IMDB 분류 : [rnn_text_classification.ipynb](./deep_learning/rnn_text_classification.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dhrim/jetson_image/blob/master/data/rnn_text_classification.ipynb)
-- 한글 영화 평가 데이터 분류 : [korean_word_sequence_classification.ipynb](./deep_learning/korean_word_sequence_classification.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dhrim/jetson_image/blob/master/data/korean_word_sequence_classification.ipynb)
+# 내용
+- 1부. 셋업
+    - [Jetson 셋업](jetson_setup.pdf)
+    - [Jetson-Inference 프로젝트 설치](jetson_inference/setup_by_docker.md)
+    - 영상 분류와 영상 탐지 동작 확인
+        - [분류(classificaiton)](jetson_inference/execute_classification.md)
+        - [물체 탐지(object detection)](jetson_inference/execute_object_detection.md)
+- 2부. 영상 분류 학습
+    - [영상분류 데이터 캡쳐와 학습](jetson_inference/train_classification_thumb_up_down.md)
+- 3부. 물체 탐지 학습
+    - [물체탐지 데이터 캡쳐와 학습](jetson_inference/train_object_detection_with_custom_data.md)    
 
 
 <br>
 
-# 교육에 필요한 장비
-[requirements.md](requirements.md)
+# 셋업을 위한 필요 사항
+
+- Jetson Nano (https://www.devicemart.co.kr/goods/view?no=12513656)
+- Power Adapter. (https://www.devicemart.co.kr/goods/view?no=12240663) Jetson Nano에 비포함. 별도 구매 필요
+- USB keyboard
+- USB mouse
+- Monitor
+    - Monitor power 케이블
+    - Monitor HDMI 케이블
+- 인터넷에 연결된 RJ45 LAN 케이블. Jetson을 인터넷에 연결하기 위한.
+- 카메라 모듈 (https://www.devicemart.co.kr/goods/view?no=13563285)
+- SD 카드. 64G
+- SD 카드 USB 리더
+- 별도의 윈도우 컴퓨터. SD 카드 만들때 사용.
+- 원할한 네트웤. 6G 파일 다운 받는데 수분 정도 소요되는.
+
+<br>
+
+
+
+
