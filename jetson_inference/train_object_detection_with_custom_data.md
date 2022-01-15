@@ -165,9 +165,7 @@ $ python onnx_export.py --model-dir=models/cups
 
 ## 탐지 실행
 ```
-$ NET=models/cups
-
-$ detectnet.py --model=$NET/ssd-mobilenet.onnx --labels=$NET/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes csi://0
+$ detectnet.py --model=models/cups/ssd-mobilenet.onnx --labels=models/cups/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes csi://0
 ```
 
 
