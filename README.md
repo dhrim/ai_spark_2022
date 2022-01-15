@@ -13,6 +13,7 @@ http://aifactory.space/competition/data/1946
         - [분류(classificaiton)](jetson_inference/execute_classification.md)
         - [물체 탐지(object detection)](jetson_inference/execute_object_detection.md)
 - 2부. 영상 분류 학습
+    - [학습 환경 준비](jetson_inference/prepare_training.md)
     - [영상분류 데이터 캡쳐와 학습](jetson_inference/train_classification_thumb_up_down.md)
 - 3부. 물체 탐지 학습
     - [물체탐지 데이터 캡쳐와 학습](jetson_inference/train_object_detection_with_custom_data.md)    
